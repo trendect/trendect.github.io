@@ -1,0 +1,394 @@
+body {
+    font-family: "Noto Sans JP", sans-serif;
+}
+
+*{
+    font-family: "Noto Sans JP", sans-serif;
+}
+
+.t_logo {
+    height: 60px;
+}
+
+a{
+    text-decoration: none;
+    color: #000000;
+}
+
+.e_link{
+    color: #aa53fc;
+}
+
+
+
+#topblock {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: grid;
+    place-content: center;
+}
+
+
+
+
+#tb-form{
+    background-color: #f0f0f0;
+    border: solid 1.5px #e4e4e4;
+    border-radius: 11px;
+    padding: 5px;
+    width: 500px;
+    max-width: 100%;
+}
+
+#option {
+    position: fixed;
+    left: 0;
+    background-color: #f0f0f0;
+    width: 80px;
+    height: 100%;
+    margin: 5px;
+    border-radius: 11px;
+    box-sizing: border-box; 
+}
+
+    #nr_main {
+        margin-left: 85px; 
+    }
+
+#r {
+    position: fixed;
+    right: 0;
+    background-color: #f0f0f0;
+    width: 250px;
+    height: calc(100% - 25px);
+    margin: 5px;
+    border-radius: 11px;
+    box-sizing: border-box; 
+padding: 5px;
+}
+
+.rb {
+    color: #000000;
+    background-color: #e4e4e4;
+    margin: 2.5px;
+    padding: 5px;
+    border-radius: 11px;
+height: 150px;
+overflow-y: scroll; 
+}
+
+.under_btn{
+height: 30px;
+}
+
+.rh_icon{
+height: 20px;
+}
+
+.post{
+    background-color: #f0f0f0;
+    padding: 5px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    border-radius: 11px;
+    width: calc(100% - 10px);
+    word-break: break-all;
+}
+
+.cs{
+    background-color: #f0f0f0;
+    padding: 5px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    border-radius: 11px;
+    width: calc(100% - 10px);
+    word-break: break-all;
+}
+
+.result{
+    background-color: #f0f0f0;
+    padding: 5px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    border-radius: 11px;
+    width: calc(100% - 10px);
+    word-break: break-all;
+}
+
+.e {
+    font-size: 17px;
+    background-color: #e4e4e4;
+    margin: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 11px;
+    text-align: center;
+}
+
+.tab {
+    color: #000000;
+    font-size: 17px;
+    background-color: #e4e4e4;
+    margin: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 11px;
+    text-align: center;
+}
+
+.oi{
+    font-size: 1.05em;
+    height: 2em;
+    border: solid 1.5px #dfdfdf;
+    border-radius: 11px;
+}
+
+input[type='file'] {
+  color: rgb(31, 41, 55);
+  cursor: pointer;
+  border: 1px solid rgb(191, 194, 199);
+  border-radius: 0.375rem;
+  padding-right: 0.5rem;
+  width: 24rem;
+}
+
+iflame{
+border: none;
+}
+
+::file-selector-button,
+::-webkit-file-upload-button {
+  background-color: rgb(209, 213, 219);
+  color: rgb(31, 41, 55);
+  border: none;
+  cursor: pointer;
+  border-right: 1px solid rgb(191, 194, 199);
+  padding: 0.25rem 1rem;
+  margin-right: 1rem;
+}
+
+textarea.oi{
+    font-size: 1.05em;
+    height: 8em;
+    border: solid 1.5px #dfdfdf;
+    border-radius: 11px;
+}
+
+.bt1{
+    color: #ffffff;
+    background-color: #aa53fc;
+    border: none;
+    border-radius: 20px;
+    font-size: 1.05em;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 5px;
+padding-left: 15px;
+padding-right: 15px;
+transition: padding 0.25s ease-in-out;
+}
+
+.bt1:hover{
+    color: #ffffff;
+    background-color: #aa53fc;
+    border: none;
+    border-radius: 20px;
+    font-size: 1.05em;
+    margin-top: 5px;
+    padding: 5px;
+padding-left: 20px;
+padding-right: 20px;
+}
+
+.tl_tab{
+    color: #000000;
+    background-color: #f0f0f0;
+    border: none;
+    border-radius: 20px;
+    font-size: 1.05em;
+    margin: 5px;
+    padding: 5px;
+padding-left: 15px;
+padding-right: 15px;
+transition: padding 0.25s ease-in-out;
+}
+
+.tl_tab:hover{
+    color: #000000;
+    background-color: #f0f0f0;
+    border: none;
+    border-radius: 20px;
+    font-size: 1.05em;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 5px;
+padding-left: 20px;
+padding-right: 20px;
+}
+
+.tl_tab_e{
+    color: #ffffff;
+    background-color: #000000;
+    border: none;
+    border-radius: 20px;
+    font-size: 1.05em;
+    margin: 5px;
+    padding: 5px;
+padding-left: 15px;
+padding-right: 15px;
+transition: padding 0.25s ease-in-out;
+}
+
+.tl_tab_e:hover{
+    color: #ffffff;
+    background-color: #000000;
+    border: none;
+    border-radius: 20px;
+    font-size: 1.05em;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 5px;
+padding-left: 20px;
+padding-right: 20px;
+}
+
+
+.bt2{
+    color: #ffffff;
+    background-color: #08a100;
+    border: none;
+    border-radius: 11px;
+    font-size: 1.05em;
+    margin-top: 5px;
+    padding: 5px;
+}
+
+.bt3{
+    color: #08a100;
+    background-color: #f0f0f0;
+    border: none;
+    border-radius: 11px;
+    font-size: 1.05em;
+    margin-top: 5px;
+    padding: 5px;
+}
+
+.coin_icon{
+height:60px;
+}
+
+.content{
+cursor:default;
+}
+
+.content:hover{
+background-color:#e4e4e4;
+    border-radius: 11px;
+}
+
+.content img {
+    height: 200px;
+max-width: 100%;
+object-fit: contain;
+}
+
+.content a {
+    text-decoration: underline;
+    color: #000000;
+}
+
+.post .content p {
+    white-space: pre-wrap;
+}
+
+.post_op{
+    background-color: #f0f0f0;
+    border: none;
+    padding: 0px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.usericon{
+    width: 125px;
+    height: 125px;
+    border-radius: 100%;
+}
+
+.post_usericon{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+}
+
+.userid{
+    background-color: #d7ffd9;
+    display: inline-block;
+    border: 1.25px solid;
+    border-color: #00c407;
+    border-radius: 7px;
+}
+
+.rd{
+    background-color: #d7deff;
+    display: inline-block;
+    border: 1.25px solid;
+    border-color: #0024c6;
+    border-radius: 7px;
+}
+
+hr{
+margin-top: 30px;
+}
+
+@media (max-width: 414px) {
+    #main{
+        width: calc(100vw - 10px);
+    }
+
+    #option {
+        position: fixed;
+        bottom: 0;
+        width: calc(100% - 10px);
+        height: auto;
+        left: 0;
+    }
+    .e{
+        display: inline-block;
+        padding: 10px;
+    }
+    .tab{
+        display: inline-block;
+        padding: 10px;
+    }
+    .oi{
+        width: 100%;
+    }
+}
+
+@media (min-width: 415px) {
+    #main{
+        width: 100vw;
+    }
+    #option {
+        height: calc(100% - 25px);
+    }
+    div.top{
+        display: flex;
+    }
+    .oi{
+        width: 500px;
+    }
+    #main {
+        margin-left: 85px; 
+margin-right: 255px;
+    }
+}
+
+@media (max-width: 768px) {
+    #r {
+display: none;
+margin-right: 0px;
+    }
