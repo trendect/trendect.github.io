@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript実行プログラム</title>
+    <style>
+        #console {
+            border: 1px solid #ccc;
+            padding: 10px;
+            width: 100%;
+            height: 200px;
+            overflow-y: scroll;
+            background-color: #f9f9f9;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript 実行プログラム</h1>
+    <textarea id="codeInput" rows="4" cols="50" placeholder="ここにJavaScriptコードを入力します..."></textarea><br>
+    <button id="runButton">実行</button>
+    
+    <div id="console"></div>
+
+    <script>
+        const runButton = document.getElementById('runButton');
+        const codeInput = document.getElementById('codeInput');
+        const consoleDiv = document.getElementById('console');
+
+        runButton.addEventListener('click', () => {
+            const code = codeInput.value;
+            try {
+                // JavaScriptのコードを実行し、結果を取得
+                const result = eval(code);
+                consoleDiv.innerHTML += `<div>> ${code}</div>`;
+                consoleDiv.innerHTML += `<div>結果: ${result}</div>`;
+            } catch (error) {
+                consoleDiv.innerHTML += `<div>エラー: ${error.message}</div>`;
+            }
+            // スクロールを最下部に
+            consoleDiv.scrollTop = consoleDiv.scrollHeight;
+        });
+    </script>
+</body>
+</html>
