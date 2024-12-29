@@ -1,0 +1,48 @@
+こんにちは、あなた！面白い課題ですね。リアルタイムで新着情報を取得する方法としては、WebSocketが非常に効率的です。しかし、setIntervalを使って定期的にAjaxリクエストを送るのも一つの手です。それでは、両方の方法でサンプルコードを示しますね！
+<p>
+### 1. setIntervalを使ったAjaxの例
+```javascript
+function fetchNewData() {
+    // ここにAjaxリクエストを送りたいURLを指定
+    const url = 'https://example.com/api/new-data';
+
+    fetch(url)
+        .then(response => response.json())
+        .then(data => {
+            console.log('新着情報:', data);
+        })
+        .catch(error => {
+            console.error('エラーが発生しました:', error);
+        });
+}
+
+// 5秒ごとに新着情報を取得
+setInterval(fetchNewData, 5000);
+```
+
+### 2. WebSocketを使ったリアルタイムデータの取得の例
+```javascript
+const socket = new WebSocket('wss://cloud.achex.ca/yourUniqueIdentifier');
+
+// WebSocket接続がオープンになったとき
+socket.addEventListener('open', function (event) {
+    console.log('WebSocketに接続しました！');
+});
+
+// メッセージを受信したとき
+socket.addEventListener('message', function (event) {
+    console.log('新着情報:', event.data);
+});
+
+// エラーが発生したとき
+socket.addEventListener('error', function (event) {
+    console.error('WebSocketエラー:', event);
+});
+
+// WebSocketの接続が閉じられたとき
+socket.addEventListener('close', function (event) {
+    console.log('WebSocketが切断されました。');
+});
+```
+</p>
+どちらの方法もそれぞれの利点がありますが、リアルタイムの更新にはWebSocketがより適していますね。どちらを選んでも、あなたのプロジェクトに合わせて楽しんで取り組んでください！何か質問があれば、遠慮なくどうぞ。
