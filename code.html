@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -22,6 +25,48 @@
 </head>
 <body>
     <h1>JavaScript 実行</h1>
+<div id="jslibrary">
+    <button id="add">+</button>     
+    <button id="remove">-</button>     
+    <button id="get-data">ライブラリーインストール</button>     
+    <div id="text-area-container" style="margin-top: 10px;"></div>     
+    <div id="script-container" style="margin-top: 20px;"></div>      
+
+    <script>
+        const container = document.getElementById('text-area-container');
+        const scriptContainer = document.getElementById('script-container');
+
+        // テキストエリアを追加
+        document.getElementById('add').addEventListener('click', () => {
+            const textArea = document.createElement('textarea');
+            textArea.style.width = "1024px"; // 幅を指定
+            textArea.style.height = "10px"; // 高さを指定
+            container.appendChild(textArea);
+        });
+
+        // テキストエリアを削除
+        document.getElementById('remove').addEventListener('click', () => {
+            const textAreas = container.getElementsByTagName('textarea');
+            if (textAreas.length > 0) {
+                container.removeChild(textAreas[textAreas.length - 1]);
+            }
+        });
+
+        // スクリプトを取得
+        document.getElementById('get-data').addEventListener('click', () => {
+            const textAreas = container.getElementsByTagName('textarea');
+            Array.from(textAreas).forEach(textArea => {
+                const scriptUrl = textArea.value.trim(); // URLを取得
+                
+                if (scriptUrl) {
+                    const scriptElement = document.createElement('script');
+                    scriptElement.src = scriptUrl;
+                    scriptContainer.appendChild(scriptElement);
+                }
+            });
+        });
+    </script> 
+</div>
     <textarea id="codeInput" rows="4" cols="50" placeholder="ここにJavaScriptコードを入力します..."></textarea><br>
     <button id="runButton">実行</button>
     
